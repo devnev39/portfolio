@@ -2,6 +2,7 @@ import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
 import classNames from 'classnames';
+import { Analytics } from '@vercel/analytics/react';
 
 import { Flex, Background } from '@/once-ui/components'
 import { Footer, Header, RouteGuard } from "@/app/components";
@@ -71,6 +72,7 @@ export default function RootLayout({ children } : RootLayoutProps) {
 	const accent = colors[Math.floor(Math.random() * (colors.length-1))]
 	console.log(accent);
 	return (
+		<>
 		<Flex
 			as="html" lang="en"
 			background="page"
@@ -114,5 +116,7 @@ export default function RootLayout({ children } : RootLayoutProps) {
 				<Footer/>
 			</Flex>
 		</Flex>
+		<Analytics />
+		</>
 	);
 }
