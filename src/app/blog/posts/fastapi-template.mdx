@@ -1,0 +1,51 @@
+---
+title: "The fastapi template I have been using since past year"
+publishedAt: "2024-03-05"
+summary: "I have been using a fastapi template for over a year now and it's been my saviour every time I had to start any project at work or one of my personal project !"
+---
+
+## Introduction
+
+For past 2 years, I have been using fastapi as my go to backend framework. And every when you start a project, it's crucial that you setup the project in a way
+which is self explainatory. If you're implementing any new feature, it should come to you naturally where to keep which file. This template has made my life easier
+to some degree.
+
+Though this template uses mongodb, I also have some templates which are using postgresql and mysql which uses an ORM. You can also use ODM with mongodb but I prefer without ODM when working with
+nosql since it gives more flexibility in some cases but it depends on personal choice and the project at hand.
+
+## Features
+
+- Asynchronous mongodb integration with fastapi using motor client
+- Custom logging with sys log support
+- Exceptions for handling internal client level exceptions
+- Single point of configuration
+
+### Synchronous vs Asynchronous
+
+Since this template is intended to be used for a typical crud backend implementation with queries to run on the database, it's always good to use asynchronous python endpoints
+for non-blocking io operations. 
+
+In case you're developing an endpoint which does CPU intensive tasks, it's imperative to use synchronous endpoint which will run the code directly on 
+the thread with thread pool executor. With more workers, you can ensure that the operation won't block other reqeusts.
+
+### Models
+
+In this template, I have separated common parts from all the models into a common folder. Fields like updated_at, created_at etc. are common across all the models. This not only separates the code
+but also helps us to keep the code clean and readable. While genearing openAPI spec docs, we can hide these common fileds and show other developers only the fileds that they need to care about.
+
+### Exception handling
+
+Gracefully handling any exception is a big task. This template has been written in such a way that it's easy to handle any kind of exception. Client level exceptions are derived from a single base class which is used
+to catch this kind of exception across the whole application.
+
+Also, each exception can be associated with an trace_id which can be used for debugging.
+
+### Logging 
+
+Logging is an important aspect of any application. This template has been written in such a way that it's easy to log any kind of information. The logger provides both stdout and syslog support.
+For syslogs, I have been using papertrail for simple logs. But you can use any service of your choice. The logs contain the trace id which is proivded with each error and warning that is raised. This is useful for debugging.
+
+## Conclusion
+
+You should really consider templating codes and stuctures that you use frequently. This template will save you some time and effor which is required at the start of any project. Moreover, 
+you will have an general knowlege of every project that how it's been structured. It also helps in implementation of any new feature and debugging.

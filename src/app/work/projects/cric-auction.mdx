@@ -1,0 +1,68 @@
+---
+title: "Cric Auction"
+publishedAt: "2022-04-08"
+summary: "Cric Auction is a platform designed to simulate cricket player auctions. It is currently used annually by a few colleges in the Pune region of Maharashtra, India."
+images:
+  - "/images/projects/cric/cover-1.png"
+  - "/images/projects/cric/cover-2.png"
+  - "/images/projects/cric/cover-3.png"
+team:
+  - name: "Bhuvanesh Bonde"
+    role: "Software Developer"
+    avatar: "/images/avatar.jpeg"
+    linkedIn: "https://www.linkedin.com/in/bhuvanesh-bonde"
+  - name: "Mitesh Kulkarni"
+    role: "Designer-QA"
+    avatar: "/images/avatar-3.jpeg"
+    linkedIn: "https://www.linkedin.com/in/mitesh-kulkarni-913aa41b8/"
+  - name: "Shreekar Kulkarni"
+    role: "Designer-QA"
+    avatar: "/images/avatar-2.jpeg"
+    linkedIn: "https://www.linkedin.com/in/shreekar-kulkarni-/"
+  - name: "Abhishek Sabale"
+    role: "Designer-QA"
+    avatar: "/images/avatar-4.jpeg"
+    linkedIn: "https://www.linkedin.com/in/abhishek-sabale-804656170/"
+  
+links:
+  - name: "Visit"
+    icon: "openLink"
+    link: "https://cric-front.vercel.app"
+
+  - name: "Github"
+    icon: "github"
+    link: "https://github.com/devnev39/cric-front"
+---
+
+## Overview
+Cric Auction is a platform designed to simulate cricket player auctions. It is currently used annually by a few colleges in the Pune region of Maharashtra, India.
+This is the third revision of this platform. It offers many features, including player and team data management, team evaluation based on provided metrics, security through a simple authentication system, and real-time updates with MQTT service, among others.
+
+## Key Features
+
+- Auction authentication with session management
+- Custom players dataset and default dataset option
+- Stats display for the teams
+- Realtime updates for all the auction screens
+- Automatic metric evaluation based on provided rules
+
+## Technologies Used
+
+- **React Redux**: For building the front-end with clean, reusable components with robust state management with redux.
+- **Vercel**: To deploy the frontend fast and efficiently.
+- **Express.js**: To build the backend service.
+- **Docker**: To manager and dockerize the project to be hosted on GCP.
+- **GCP**: To host the backend service. GCP with a free tier cloud run has less time in cold start that any other free service.
+- **MQTT**: To publish and subscribe to MQTT topics for realtime updates.
+
+## Challenges and Learnings
+
+> While building the first version of this project, I had to conduct extensive research on database modeling, as I was in my second year of engineering. Every time I thought about the database structure, I felt overwhelmed. However, after several iterations, I realized there is no perfect way to get things right the first time. The key is to implement a solution that works, as long as it efficiently utilizes resources.
+
+> One major challenge I faced was with Socket.io—connections kept dropping randomly, and I couldn't figure out why. While deploying the backend on a GCP Compute Engine (VM) resolved the issue, I hesitated due to concerns about cost. Fortunately, I discovered MQTT during an internship project, which turned out to be a reliable solution. Since it worked well, I decided to stick with it and didn’t make further changes to that part of the system.
+
+> When deploying the frontend and backend on free-tier services like Render, one challenge I encountered was session management, as Render doesn’t provide site certificates. Switching to Vercel for the frontend and GCP for the backend resolved all these issues.
+
+## Outcome
+
+This project was a valuable learning experience. It is now actively used by several colleges in the Pune region to host similar events. Throughout the extended development process, driven by user feedback, I gained significant insights into the software development life cycle (SDLC). What began as a simple exercise evolved into a cornerstone project that shaped my approach to software development.

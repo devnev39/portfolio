@@ -1,0 +1,71 @@
+---
+title: "SLDC-Live Realtime consumption and generation data"
+publishedAt: "2024-04-01"
+summary: "The application SLDC Live monitors, records, and offers analysis of the demand and generation of energy in the state of Maharashtra. It accomplishes that by fusing several frameworks and technologies. Each job in the program consists of multiple subtasks."
+images:
+  - "/images/projects/sldc/cover-1.png"
+  - "/images/projects/sldc/cover-2.png"
+  - "/images/projects/sldc/cover-3.png"
+  - "/images/projects/sldc/cover-4.png"
+  - "/images/projects/sldc/cover-5.png"
+
+team:
+  - name: "Bhuvanesh Bonde"
+    role: "Software Developer"
+    avatar: "/images/avatar.jpeg"
+    linkedIn: "https://www.linkedin.com/in/bhuvanesh-bonde"
+
+links:
+  - name: "Visit"
+    icon: "openLink"
+    link: "https://sldc-live.vercel.app"
+
+  - name: "Github"
+    icon: "github"
+    link: "https://github.com/devnev39/sldc-live"
+---
+
+## Overview
+
+The application SLDC Live monitors, records, and offers analysis of the demand and generation of energy in the state of Maharashtra. It accomplishes that by fusing several frameworks and technologies. Each job in the program consists of multiple subtasks.
+
+## Key Features
+
+- **Realtime** demand and consumption data.
+- **Prediction** and **analysis** of the saved data.
+- Comprehensive **breakdown of generation data up to the last 15 days**.
+- Upto **15 days of data for normal viewing**.
+- Upto **300 days of data for training deep learning models and statistics**.
+- **Fully automated deep learning model pipeline with Cloud run and Scheduler.**
+- **Fully automated data scraping pipeline with Cloud run, Scheduler and Firebase.**
+- **7-day cycle of automated training** the deep learning model.
+- **Responsive design** of all kind of devices - Phones, Tablet, Desktop.
+
+## Technologies Used
+
+- **React Redux**: For building the front-end codebase with clean, reusable components with robust state management.
+- **Vercel**: To deploy the frontend fast and efficiently.
+- **FastAPI**: To build the inference service and data scraping service.
+- **Tensorflow**: To train new models and fine tune older models each week.
+- **GCP**: Hosting all the fastapi services - Inference service and Data scraping service.
+- **Docker**: To manager and dockerize the project to be hosted on GCP.
+
+## Challenges and Learnings
+
+> When I started developing the prototype for the data scraper, the main challenge was to find correct combination of annotations and ocr model to get good results. I tried many ocr models along with different annotations to get to a good solution.
+
+> After the data scraper was ready, it was easy to deploy that with a light weight backend like fastapi and run that each hour with cron jobs. After this, I waited for some time to see the quality of data received.
+
+> Once I was sure that I have enough data, I trained some LSTM deep learning models to get an idea of what configuration yields what results. To be honest, I am still learning a lot since there are endless configurations that we can use in this case!
+
+It's daunting and exciting at the same time 🌱
+
+## Outcome
+
+- **Fully automated deep learning model pipeline with Cloud run and Scheduler.**
+- **Fully automated data scraping pipeline with Cloud run, Scheduler and Firebase.**
+- **7-day cycle of automated training** the deep learning model.
+- **Responsive design** of all kind of devices - phones, Tablet, Desktop.
+- **Data source for analysis** of the demand and generation data - Anyone can download the data for analysis.
+---
+This project shows your ability to build an application that can monitor, record, and offer extensive analysis on the data gathered. Also it showscases how we can cloud services to automate the process.

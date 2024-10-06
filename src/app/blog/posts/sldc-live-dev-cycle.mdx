@@ -1,0 +1,41 @@
+---
+title: "SLDC Live - Slow And Steady Development"
+publishedAt: "2024-04-08"
+summary: "I started sldc live as a single python script scraping data from a image. Now it is one of the best project that I have built!"
+---
+
+I started sldc live as a single python script scraping data from a image. Now it is one of the best project that I have built!
+
+## Reflecting on the Journey So Far
+
+At the beginning of 2024, I thought this project would never run smoothly. I doubted its feasibility and wondered if it would be a waste of time. However, it has turned out to be one of the most rewarding projects I've built. Through this project, I’ve learned a tremendous amount, collaborated with my college professors to analyze data, and helped others along the way. It's been an incredible journey so far, and I plan to continue contributing to this project regularly in the future.
+
+## What This Milestone Represents
+
+This project has taught me invaluable lessons about machine learning, deep learning, and working with large time-series data. I’ve learned which factors are essential in analyzing such data, and I’m constantly refining my approach.
+
+## The Start
+
+Initially, the goal was simple: extract an image, process it, and store the results. What seemed straightforward ended up taking me around two to three weeks to master. Once I got the hang of it, I managed to set up the frontend with basic boilerplate functionality within a week.
+
+## Bad state management
+
+One recurring mistake I make in my projects is underestimating the potential for data expansion. As the amount of data grows, effective state management becomes critical to ensure the frontend continues functioning as expected—without any surprises. (Hey! That's good thing down here! 🤫)
+
+## Intermediate
+
+Once sufficient data was being scraped each hour, I shifted my focus to implementing core functionalities, such as:
+- Allowing data downloads
+- Data filtering 
+- Analytics on the available data
+- Data visualization
+- Separation of some data from collections for faster loading time
+
+## Deep Learning
+
+After gathering enough data, I began experimenting with basic LSTM models, which gave me decent results considering the small dataset. To optimize time and efficiency, I implemented a closed-loop learning automation system that fine-tunes a manually selected model every week using the latest scraped data. I’ve only been using this method for seven days, but there’s definitely room for improvement. This automation significantly reduced manual intervention in the training loop.
+Each trained model is stored in GCP blob storage for easy access. Whenever I notice a drop in performance, I adjust the model’s weights and retrain it until it performs optimally. This process repeats until I’m satisfied with the results.
+
+## Conclusion
+
+SDLC Live has been a project of steady growth, from simple beginnings to handling complex data and implementing deep learning models. Every step has taught me valuable lessons, not just in terms of technology but also in persistence and continuous improvement. While there’s still much to refine, this journey has reinforced my belief in taking things slow, learning from mistakes, and evolving the project bit by bit. I’m excited to see where this project leads and how much more I can achieve as I continue to develop and enhance its capabilities.
