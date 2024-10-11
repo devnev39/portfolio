@@ -62,7 +62,7 @@ export function generateMetadata({ params }: BlogParams) {
 
 export default function Blog({ params }: BlogParams) {
 	let post = getPosts(['src', 'app', 'blog', 'posts']).find((post) => post.slug === params.slug)
-
+	
 	if (!post) {
 		notFound()
 	}
@@ -118,7 +118,18 @@ export default function Blog({ params }: BlogParams) {
 					onBackground="neutral-weak">
 					{formatDate(post.metadata.publishedAt)}
 				</Text>
-			</Flex>
+				{
+					post.metadata?.links.map((item) => (
+						<Button
+						key={item.name}
+						href={item.link}
+						prefixIcon={item.icon}
+						label={item.name}
+						size="s"
+						variant="tertiary"/>
+					))
+				}
+				</Flex>
 			<Flex
 				as="article"
 				direction="column"

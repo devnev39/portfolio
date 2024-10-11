@@ -9,6 +9,12 @@ type Team = {
     linkedIn: string;
 };
 
+type Link = {
+    name: string;
+    link: string;
+    icon: string;
+}
+
 type Metadata = {
     title: string;
     publishedAt: string;
@@ -16,7 +22,7 @@ type Metadata = {
     image?: string;
     images: string[];
     team: Team[];
-    links: [];
+    links: Link[];
 };
 
 function getMDXFiles(dir: string) {
