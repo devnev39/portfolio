@@ -177,6 +177,8 @@ export interface About extends BasePageConfig {
       name: string;
       /** Description of studies */
       description: React.ReactNode;
+      //** Percentage or marks achieved */
+      percentage: string;
     }>;
   };
   /** Technical skills section */
